@@ -67,9 +67,29 @@ HW_CPU_X86_VMX = _CPU_X86_NS + 'vmx'
 # ref: https://en.wikipedia.org/wiki/AMD-V
 HW_CPU_X86_SVM = _CPU_X86_NS + 'svm'
 
+# All hypervisor specific features are prefixed with this namespace
+_VIRT_NS = 'virt:'
+
+# All libvirt specific features are prefixed with this namespace
+_VIRT_LIBVIRT_NS = _VIRT_NS + 'libvirt:'
+
+# All Hyper-V specific features are prefixed with this namespace
+_VIRT_HYPERV_NS = _VIRT_NS + 'hyperv:'
+
+# All VMware specific features are prefixed with this namespace
+_VIRT_VMWARE_NS = _VIRT_NS + 'vmware:'
+
+# All XenServer specific features are prefixed with this namespace
+_VIRT_XENSERVER_NS = _VIRT_NS + 'xenserver:'
+
 NAMESPACES = {
     'hardware': _HW_NS,
     'hw': _HW_NS,
     'cpu': _CPU_NS,
     'x86': _CPU_X86_NS,
+    'virt': _VIRT_NS,
+    'libvirt': _VIRT_LIBVIRT_NS,
+    'hyperv': _VIRT_HYPERV_NS,
+    'vmware': _VIRT_VMWARE_NS,
+    'xenserver': _VIRT_XENSERVER_NS,
 }
